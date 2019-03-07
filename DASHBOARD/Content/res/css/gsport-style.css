@@ -1,0 +1,147 @@
+html{
+  zoom:80%;
+}
+
+.li_util{
+  border-bottom: 1px solid #0000004d;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #0000004d;
+  padding-top: 15px;
+}
+
+.left-sidebar, .topbar .top-navbar .navbar-header{
+  border-right : 1px solid #0000004d;
+}
+
+.topbar .navbar-collapse{
+  border-bottom: 1px solid #0000004d;
+}
+
+.topbar .profile-pic{
+  border-left: 1px solid #0000004d;
+}
+
+.jq-toast-wrap.top-right{
+  display: none !important;
+}
+
+.sidebar-nav>ul>li>a.active{
+  background: #fff !important;
+}
+
+.form-control{
+  border-bottom: 1px #b1b1b1 solid !important;
+}
+
+.mgr10{
+  margin-right: 10px !important;
+}
+
+.selbutton{
+  border: 0;
+  border-bottom: 1px #b1b1b1 solid;
+  border-radius: 0;
+  height: auto;
+}
+
+.custom-select:focus{
+  box-shadow: none !important;
+}
+
+.ttl-brdr{
+  border-bottom: 1px #b7b7b7 solid;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-title{
+  font-size: 18pt;
+}
+
+.form-control{
+  background: #f9f9f9 !important;
+  padding: 0 10px !important;
+}
+
+.dataTables_filter input{
+  background: #f9f9f9 !important;
+  padding: 5px 10px !important;
+}
+
+.page-titles .breadcrumb li{
+  font-size: 14px;
+  font-style: italic;
+}
+
+.utilaccesstable>.dataTables_wrapper>.dataTables_length,
+.utilaccesstable>.dataTables_wrapper>.dataTables_filter,
+.utilaccesstable>.dataTables_wrapper>.dataTables_info{
+  display: none !important;
+}
+
+.table td, .table th{
+  color: #000 !important;
+}
+
+.txt-centerlogin{
+  text-align: center;
+  font-weight: 500;
+}
+
+.dark-text{
+  width: 75%;
+}
+
+.cardlogin>.card-body{
+  padding: 35px !important;
+}
+
+.btn-lgncstm{
+  padding: 5px !important;
+  border-radius: 12px !important;
+}
+
+.imglogo{
+  width: 100% !important;
+  text-align: center;
+}
+
+.cardlogin{
+  border-radius: 25px !important;
+  background: #ffffffd1 !important;
+  /* box-shadow: 3px 5px 7px #a9a3a3 !important; */
+}
+
+.inptlogin{
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px #b1b1b1 solid !important;
+    border-radius: 0;
+}
+
+.inptlogin:focus{
+    box-shadow:none !important;
+}
+
+.login-register{
+  padding: 5% 0 10% !important;
+}
+
+.form-control[readonly], .clockpicker>.form-control {
+  cursor: default;
+}
+
+.page-titles, .page-wrapper{
+  background: #fff !important;
+}
+
+.table>tbody>tr>td>.btn{
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card-body{
+  padding: 0 !important;
+}

@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- CONTENT START -->
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Team</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="ttl-brdr">
+                                <h5 class="card-title">Team</h5>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info" onclick="window.location.href='/team/create'"><i class="fa fa-plus-circle"></i> Add New</button>
+                        <div class="table-responsive">
+                            <table id="tableUser" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:10%;">@Html.Label("User ID")</th>
+                                        <th style="width:15%;">@Html.Label("User Name")</th>
+                                        <th style="width:15%;">@Html.Label("Roles")</th>
+                                        <th style="width:10%;">@Html.Label("Customer Code")</th>
+                                        <th>@Html.Label("Customer Name")</th>
+                                        <th style="width:5%;">@Html.Label("Active")</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            @*<td>@Html.DisplayFor(modelItem => item.UserID)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Nama)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.KodeRoles)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.KodeCustomer)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.NamaCustomer)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.bAktif)</td>*@
+                                            @*<td><input checked="checked" class="check-box" disabled="disabled" type="checkbox" @if (@Html.DisplayFor(modelItem => item.bAktif).ToString() == "1") { @ck ; }></td>*@
+                                            <td style="text-align:center;width:5%;">
+                                                @*<button id="ubah" name="ubah" type="button" onclick="UpdateUsers('@Html.DisplayFor(modelItem => item.UserID)')" class="btn btn-success" data-toggle="tooltip" data-original-title="Edit"><span class="icon-Pencil"></span></button>*@
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> Dashboard GSport © 2018 </footer>
+</div>
+<!-- CONTENT END -->
+}
+
+
+@Scripts.Render("~/Content/IndexJs")
+
+<script>
+    $(function () {
+        $('#tableUser').DataTable({
+            "bSort": false
+        });
+    });
+</script>

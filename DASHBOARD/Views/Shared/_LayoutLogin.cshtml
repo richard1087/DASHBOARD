@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD START -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/res/assets/images/favicon.ico">
+    <title>GSPORT - Login</title>
+
+    @Styles.Render("~/Content/LoginCss")
+</head>
+<!-- HEAD END -->
+
+<body class="card-no-border">
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Admin Wrap</p>
+        </div>
+    </div>
+
+    <section id="wrapper">
+        <div class="login-register" style="background-image:url(../Content/res/assets/images/background/login-register.jpg);">
+            <div class="login-box card cardlogin">
+                <div class="card-body">
+
+                    @RenderBody()
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @Scripts.Render("~/Content/LoginJs")
+
+    <script type="text/javascript">
+        $(function() {
+            $(".preloader").fadeOut();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        $('#to-recover').on("click", function() {
+            $("#loginform").slideUp();
+            $("#recoverform").fadeIn();
+        });
+
+        function viewPassword() {
+            var passwordInput = document.getElementById('Password');
+            var passStatus = document.getElementById('pass-status');
+
+            if (passwordInput.type == 'password') {
+                passwordInput.type = 'text';
+                passStatus.className = 'fa fa-eye-slash';
+            }
+            else {
+                passwordInput.type = 'password';
+                passStatus.className = 'fa fa-eye';
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@*@Scripts.Render("~/bundles/jquery")*@
+<!-- HEAD START -->
+@RenderPage("_HeadLayout.cshtml")
+<!-- HEAD END -->
+
+<body class="fix-header fix-sidebar card-no-border">
+
+    <!-- NAVBAR START -->
+    @RenderPage("_TopNavigation.cshtml")
+    <!-- NAVBAR END -->
+
+    <!-- SIDEBAR START -->
+    @RenderPage("_LeftMenu.cshtml")
+    <!-- SIDEBAR END -->
+    
+    <!-- CONTENT START -->
+    @RenderBody()
+    <!-- CONTENT END -->
+
+</body>
+
+</html>
+<script type="text/javascript">
+    @*$(document).ready(function () {
+        $.ajax({
+            url: '@Url.Action("Master", "Menu")',
+            type: 'post',
+            cache: false,
+            async: true,
+            success: function (response) {
+                $.each(response, function (k, v) {
+                    $("#sidebar-menu").find("#" + v.MenuCode).removeClass("Rmv");
+                })
+                $(".Rmv").remove();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //alert("Please Wait...");
+            }
+        });
+    });*@
+</script>
+

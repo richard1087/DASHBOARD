@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- CONTENT START -->
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/user">User</a></li>
+                    <li class="breadcrumb-item active">Add New</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="ttl-brdr">
+                                <h5 class="card-title">Add New User</h5>
+                            </div>
+                        </div>
+                        <form class="form-material m-t-40 col-lg-6">
+                            <div class="form-group">
+                                <label>User ID</label>
+                                <input id="UserID" name="UserID" type="text" class="form-control form-control-line" data-id="i" placeholder="Input User ID">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input id="Password" name="Password" type="password" class="form-control form-control-line" placeholder="Input Password" data-id="i">
+                            </div>
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <input id="Nama" name="Nama" type="text" class="form-control form-control-line" data-id="i" placeholder="Input Nama">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input id="Phone" name="Phone" type="text" class="form-control form-control-line" data-id="i" placeholder="Input Phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Roles</label>
+                                <div class="input-group mb-3">
+                                    <input id="KodeRoles" name="KodeRoles" type="hidden" class="form-control form-control-line" data-id="i" readonly>
+                                    <input id="NamaRoles" name="NamaRoles" type="text" class="form-control form-control-line" placeholder="Select Roles" onclick="PopupRoles()" data-target="#Lookup" data-toggle="modal" readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-info" type="button" data-target="#Lookup" data-toggle="modal" data-id="i" onclick="PopupRoles()"><i class="icon-Magnifi-Glass2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-5">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="bAktif" checked>
+                                        <label class="custom-control-label" for="customCheckActive">Active</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-success waves-effect waves-light m-r-10" onclick="Create()">Save</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> Bus Attendance System © 2018 </footer>
+</div>
+<!-- CONTENT END -->
+
+@Html.Partial("~/Views/Shared/WarningModal.cshtml")
+@Html.Partial("~/Views/Shared/PopupModal.cshtml")
+
+@Scripts.Render("~/Content/IndexJs")

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/role">Role</a></li>
+                    <li class="breadcrumb-item active">Add New</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="ttl-brdr">
+                                <h5 class="card-title">Add New Role</h5>
+                            </div>
+                        </div>
+                        <form class="form-material m-t-40 col-lg-6">
+                            <div class="form-group">
+                                <label>Role Code</label>
+                                <input id="KodeRoles" name="KodeRoles" type="text" data-id="i" class="form-control form-control-line" placeholder="Input Role Code">
+                            </div>
+                            <div class="form-group">
+                                <label>Role Name</label>
+                                <input id="NamaRoles" name="NamaRoles" type="text" data-id="i" class="form-control form-control-line" placeholder="Input Role Name">
+                            </div>
+                            <button type="button" class="btn btn-success waves-effect waves-light m-r-10" onclick="Create()">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> Bus Attendance System © 2018 </footer>
+</div>
+
+@Html.Partial("~/Views/Shared/WarningModal.cshtml")
+@Html.Partial("~/Views/Shared/PopupModal.cshtml")
+
+@Scripts.Render("~/Content/IndexJs")
+@Scripts.Render("~/Content/DataTableJS")
